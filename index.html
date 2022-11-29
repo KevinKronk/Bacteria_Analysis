@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <h2>Improbable Beef</h3>
+        <h4>Purpose of the Study</h4>
+        <p>Improbable Beef makes lab grown meat with bacteria in order to mimic the taste of animal meat. They have decided to run a study in which volunteers have their belly buttons swabbed to see what bacteria live there. These bacteria will be tested to see if they have the potential to help make lab grown meat more delicious. Roza needs our help to visualize the bacterial data for each volunteer. That way, if Improbable Beef identifies a species as a candidate to manufacture synthetic beef, then the volunteers will know if it was found in their navel.</p>
+        <h4>Chart Information</h4>
+        <p>The bar chart shows the top 10 bacteria cultures found in the current test subjects belly button. Each OTU or operational taxonomic unit is displayed as well as it's sample value. If you place your mouse over a bar it will show the specific sample value and OTU label information.</p>
+        <p>The gauge chart shows the number of times the test subject washes their belly button each week. The number is displayed in the middle, and the black bar goes to where that number is on the indicator. It's possible that the number of times a person washed a week affects the bacteria found in their belly button. </p>
+        <p>Finally, the bubble chart shows all of the bacteria cultures found in the current test subjects sample. It's ordered and colored by the OTU ID number, and the size of the bubbles represents the sample value found for that OTU ID, bigger meaning more. If you place your mouse over a bubble it will show the specific sample value and OTU label information.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="js/charts.js"></script>
+
+</body>
+
+</html>
